@@ -1,0 +1,11 @@
+#!/bin/sh
+# nocodb s6 service
+
+export HOME=/config
+export NC_DISABLE_TELE=true
+
+# Signal readiness when the API is responsive
+s6-ready-when fetch -qo /dev/null http://localhost:8080/api/v1/health
+
+cd /config
+exec /usr/local/bin/s6-setuidgid bsd /usr/local/bin/node /app/index.js

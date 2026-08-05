@@ -1,0 +1,11 @@
+icon: ':material-table:'
+build:
+  variants:
+    - tag: latest
+      containerfile: Containerfile
+
+cit:
+  mode: screenshot
+  port: 8080
+  health: /api/v1/health
+  wait: 300

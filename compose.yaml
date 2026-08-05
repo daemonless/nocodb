@@ -1,0 +1,42 @@
+name: nocodb
+
+x-daemonless:
+  title: "NocoDB"
+  icon: ":material-table:"  # https://pictogrammers.com/library/mdi/ (material-) or https://simpleicons.org/ (simple-)
+  category: "Utilities"
+  description: "Free and self-hostable Airtable alternative — turn any database into a smart spreadsheet."
+  upstream_url: "https://github.com/nocodb/nocodb"
+  web_url: "https://nocodb.com/"
+  freshports_url: ""
+  user: "bsd"
+  mlock: false
+  upstream_binary: true
+  community: "Discord:https://discord.gg/c7GEYrvFtT"
+
+  docs:
+    env:
+      PUID: "User ID for the application process"
+      PGID: "Group ID for the application process"
+      TZ: "Timezone for the container"
+      NC_DB: "External database connection string (e.g. pg://host:5432?u=user&p=pass&d=db). Defaults to a local SQLite file in /config."
+    volumes:
+      /config: "Configuration directory (SQLite database, uploaded attachments)"
+    ports:
+      8080: "Web UI"
+
+services:
+  nocodb:
+    image: ghcr.io/daemonless/nocodb:latest
+    container_name: nocodb
+    restart: unless-stopped
+
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+
+    volumes:
+      - /path/to/containers/nocodb:/config
+
+    ports:
+      - 8080:8080

@@ -1,0 +1,9 @@
+#!/bin/sh
+# nocodb configuration setup
+
+echo "[nocodb] Setting up config directory"
+
+mkdir -p /config
+chown -R bsd:bsd /config
+
+echo "[nocodb] Configuration complete"
