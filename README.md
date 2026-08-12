@@ -20,7 +20,7 @@ Free and self-hostable Airtable alternative — turn any database into a smart s
 ## Version Tags
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
-| `latest` | **Upstream Binary**. Built from official release. | Most users. Matches Linux Docker behavior. |
+| `latest` | **Upstream Binary**. Built from official release. | Most users — recommended. |
 
 ## Prerequisites
 Before deploying, ensure your host environment is ready. See the [Quick Start Guide](https://daemonless.io/guides/quick-start) for host setup instructions.
@@ -72,7 +72,7 @@ services:
     name: nocodb
     options:
       - container: 'boot args:--pull'
-      - expose: '8080:8080 proto:tcp' \
+      - expose: '8080:8080 proto:tcp'
     oci:
       user: root
       environment:

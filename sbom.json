@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-05T17:15:23Z",
+  "generated": "2026-08-12T15:25:28Z",
   "image": "nocodb",
   "tags": {
     "latest": {
       "app_version": "0.301.3",
       "arch": "amd64",
-      "generated": "2026-08-05T17:10:06Z",
+      "generated": "2026-08-12T15:21:38Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1420,7 +1420,7 @@
               "GPLv1+"
             ],
             "name": "perl5",
-            "version": "5.42.2"
+            "version": "5.42.3"
           },
           {
             "licenses": [
@@ -1557,7 +1557,7 @@
               "APACHE20"
             ],
             "name": "simdjson",
-            "version": "4.6.4"
+            "version": "4.6.6"
           },
           {
             "licenses": [
@@ -1717,42 +1717,42 @@
           {
             "name": "@ai-sdk/amazon-bedrock",
             "purl": "",
-            "version": "4.0.146"
+            "version": "4.0.151"
           },
           {
             "name": "@ai-sdk/anthropic",
             "purl": "",
-            "version": "3.0.105"
+            "version": "3.0.110"
           },
           {
             "name": "@ai-sdk/azure",
             "purl": "",
-            "version": "3.0.95"
+            "version": "3.0.99"
           },
           {
             "name": "@ai-sdk/deepseek",
             "purl": "",
-            "version": "2.0.51"
+            "version": "2.0.55"
           },
           {
             "name": "@ai-sdk/gateway",
             "purl": "",
-            "version": "3.0.164"
+            "version": "3.0.170"
           },
           {
             "name": "@ai-sdk/google",
             "purl": "",
-            "version": "3.0.103"
+            "version": "3.0.107"
           },
           {
             "name": "@ai-sdk/groq",
             "purl": "",
-            "version": "3.0.55"
+            "version": "3.0.59"
           },
           {
             "name": "@ai-sdk/openai",
             "purl": "",
-            "version": "3.0.90"
+            "version": "3.0.94"
           },
           {
             "name": "@ai-sdk/openai-compatible",
@@ -1817,17 +1817,17 @@
           {
             "name": "@aws-sdk/checksums",
             "purl": "",
-            "version": "3.1000.26"
+            "version": "3.1000.27"
           },
           {
             "name": "@aws-sdk/client-cognito-identity-provider",
             "purl": "",
-            "version": "3.1103.0"
+            "version": "3.1108.0"
           },
           {
             "name": "@aws-sdk/client-kinesis",
             "purl": "",
-            "version": "3.1103.0"
+            "version": "3.1108.0"
           },
           {
             "name": "@aws-sdk/client-s3",
@@ -1837,12 +1837,12 @@
           {
             "name": "@aws-sdk/client-ses",
             "purl": "",
-            "version": "3.1103.0"
+            "version": "3.1108.0"
           },
           {
             "name": "@aws-sdk/client-sns",
             "purl": "",
-            "version": "3.1103.0"
+            "version": "3.1108.0"
           },
           {
             "name": "@aws-sdk/client-sts",
@@ -1852,47 +1852,47 @@
           {
             "name": "@aws-sdk/core",
             "purl": "",
-            "version": "3.977.6"
+            "version": "3.977.7"
           },
           {
             "name": "@aws-sdk/credential-provider-env",
             "purl": "",
-            "version": "3.972.67"
+            "version": "3.972.68"
           },
           {
             "name": "@aws-sdk/credential-provider-http",
             "purl": "",
-            "version": "3.972.69"
+            "version": "3.972.70"
           },
           {
             "name": "@aws-sdk/credential-provider-ini",
             "purl": "",
-            "version": "3.973.12"
+            "version": "3.973.13"
           },
           {
             "name": "@aws-sdk/credential-provider-login",
             "purl": "",
-            "version": "3.972.74"
+            "version": "3.972.75"
           },
           {
             "name": "@aws-sdk/credential-provider-node",
             "purl": "",
-            "version": "3.972.78"
+            "version": "3.972.79"
           },
           {
             "name": "@aws-sdk/credential-provider-process",
             "purl": "",
-            "version": "3.972.67"
+            "version": "3.972.68"
           },
           {
             "name": "@aws-sdk/credential-provider-sso",
             "purl": "",
-            "version": "3.973.11"
+            "version": "3.973.12"
           },
           {
             "name": "@aws-sdk/credential-provider-web-identity",
             "purl": "",
-            "version": "3.972.73"
+            "version": "3.972.74"
           },
           {
             "name": "@aws-sdk/ec2-metadata-service",
@@ -1902,72 +1902,72 @@
           {
             "name": "@aws-sdk/lib-storage",
             "purl": "",
-            "version": "3.1103.0"
+            "version": "3.1108.0"
           },
           {
             "name": "@aws-sdk/middleware-bucket-endpoint",
             "purl": "",
-            "version": "3.972.45"
+            "version": "3.972.46"
           },
           {
             "name": "@aws-sdk/middleware-expect-continue",
             "purl": "",
-            "version": "3.972.41"
+            "version": "3.972.42"
           },
           {
             "name": "@aws-sdk/middleware-flexible-checksums",
             "purl": "",
-            "version": "3.974.51"
+            "version": "3.974.52"
           },
           {
             "name": "@aws-sdk/middleware-location-constraint",
             "purl": "",
-            "version": "3.972.38"
+            "version": "3.972.39"
           },
           {
             "name": "@aws-sdk/middleware-sdk-s3",
             "purl": "",
-            "version": "3.972.72"
+            "version": "3.972.73"
           },
           {
             "name": "@aws-sdk/middleware-ssec",
             "purl": "",
-            "version": "3.972.38"
+            "version": "3.972.39"
           },
           {
             "name": "@aws-sdk/nested-clients",
             "purl": "",
-            "version": "3.997.41"
+            "version": "3.997.42"
           },
           {
             "name": "@aws-sdk/s3-request-presigner",
             "purl": "",
-            "version": "3.1103.0"
+            "version": "3.1108.0"
           },
           {
             "name": "@aws-sdk/signature-v4-multi-region",
             "purl": "",
-            "version": "3.996.43"
+            "version": "3.996.44"
           },
           {
             "name": "@aws-sdk/token-providers",
             "purl": "",
-            "version": "3.1103.0"
+            "version": "3.1108.0"
           },
           {
             "name": "@aws-sdk/types",
             "purl": "",
-            "version": "3.974.2"
+            "version": "3.974.3"
           },
           {
             "name": "@aws-sdk/util-locate-window",
             "purl": "",
-            "version": "3.965.8"
+            "version": "3.965.9"
           },
           {
             "name": "@aws-sdk/xml-builder",
             "purl": "",
-            "version": "3.972.37"
+            "version": "3.972.38"
           },
           {
             "name": "@aws/lambda-invoke-store",
@@ -2232,7 +2232,7 @@
           {
             "name": "@google-cloud/storage",
             "purl": "",
-            "version": "7.21.0"
+            "version": "7.22.0"
           },
           {
             "name": "@govtechsg/passport-openidconnect",
@@ -3042,22 +3042,22 @@
           {
             "name": "@smithy/core",
             "purl": "",
-            "version": "3.31.1"
+            "version": "3.32.0"
           },
           {
             "name": "@smithy/credential-provider-imds",
             "purl": "",
-            "version": "4.4.16"
+            "version": "4.5.0"
           },
           {
             "name": "@smithy/eventstream-codec",
             "purl": "",
-            "version": "4.4.16"
+            "version": "4.5.0"
           },
           {
             "name": "@smithy/fetch-http-handler",
             "purl": "",
-            "version": "5.6.13"
+            "version": "5.7.0"
           },
           {
             "name": "@smithy/is-array-buffer",
@@ -3067,22 +3067,22 @@
           {
             "name": "@smithy/node-http-handler",
             "purl": "",
-            "version": "4.9.13"
+            "version": "4.10.0"
           },
           {
             "name": "@smithy/protocol-http",
             "purl": "",
-            "version": "5.5.16"
+            "version": "5.6.0"
           },
           {
             "name": "@smithy/signature-v4",
             "purl": "",
-            "version": "5.6.12"
+            "version": "5.7.0"
           },
           {
             "name": "@smithy/types",
             "purl": "",
-            "version": "4.16.1"
+            "version": "4.17.0"
           },
           {
             "name": "@smithy/util-buffer-from",
@@ -3227,7 +3227,7 @@
           {
             "name": "@types/luxon",
             "purl": "",
-            "version": "3.7.3"
+            "version": "3.7.4"
           },
           {
             "name": "@types/mime",
@@ -3502,7 +3502,7 @@
           {
             "name": "ai",
             "purl": "",
-            "version": "6.0.242"
+            "version": "6.0.250"
           },
           {
             "name": "airtable",
@@ -4532,7 +4532,7 @@
           {
             "name": "eventsource-parser",
             "purl": "",
-            "version": "3.1.0"
+            "version": "3.1.1"
           },
           {
             "name": "expand-template",
@@ -4942,7 +4942,7 @@
           {
             "name": "hono",
             "purl": "",
-            "version": "4.13.0"
+            "version": "4.13.1"
           },
           {
             "name": "hosted-git-info",
@@ -5747,7 +5747,7 @@
           {
             "name": "mysql2",
             "purl": "",
-            "version": "3.23.2"
+            "version": "3.23.3"
           },
           {
             "name": "named-placeholders",
@@ -5762,7 +5762,7 @@
           {
             "name": "nanoid",
             "purl": "",
-            "version": "3.3.17"
+            "version": "3.3.18"
           },
           {
             "name": "napi-build-utils",
@@ -5972,7 +5972,7 @@
           {
             "name": "oauth4webapi",
             "purl": "",
-            "version": "3.8.6"
+            "version": "3.8.7"
           },
           {
             "name": "object-assign",
@@ -6257,7 +6257,7 @@
           {
             "name": "pg",
             "purl": "",
-            "version": "8.22.0"
+            "version": "8.23.0"
           },
           {
             "name": "pg-cloudflare",
@@ -6282,7 +6282,7 @@
           {
             "name": "pg-protocol",
             "purl": "",
-            "version": "1.15.0"
+            "version": "1.16.0"
           },
           {
             "name": "pg-types",
@@ -6342,7 +6342,7 @@
           {
             "name": "postcss",
             "purl": "",
-            "version": "8.5.25"
+            "version": "8.5.26"
           },
           {
             "name": "postcss-selector-parser",
