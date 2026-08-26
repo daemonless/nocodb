@@ -43,8 +43,11 @@ services:
       - "/path/to/containers/nocodb:/config"
     ports:
       - "8080:8080"
-    restart: unless-stopped
+    # always (not unless-stopped) so FreeBSD's podman rc.d auto-starts it at boot
+    restart: always
 ```
+
+Save as `compose.yaml`, then run `podman-compose up -d`.
 
 ### AppJail Director
 **.env**:
@@ -97,6 +100,9 @@ ARG tag=latest
 OPTION overwrite=force
 OPTION from=ghcr.io/daemonless/nocodb:${tag}
 ```
+
+Save the files above, then run `appjail-director up`.
+
 **Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
 
 ### Podman CLI
@@ -111,6 +117,8 @@ podman run -d --name nocodb \
   -v /path/to/containers/nocodb:/config \
   ghcr.io/daemonless/nocodb:latest
 ```
+
+Save as `run.sh`, then run `sh run.sh`.
 
 ### AppJail
 
@@ -128,7 +136,40 @@ appjail oci run -Pd \
   -o fstab="/path/to/containers/nocodb /config <pseudofs>" \
   ghcr.io/daemonless/nocodb:latest nocodb
 ```
+
+Save as `run.sh`, then run `sh run.sh`.
+
 **Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
+
+### Bastille
+
+> [!WARNING]
+> Bastille's OCI support is **experimental**. It requires `buildah`, shares the host network stack (`inherit`), and persists image-declared volumes under `--data-path`.
+
+```yaml
+services:
+  nocodb:
+    image: "ghcr.io/daemonless/nocodb:latest"
+    container_name: nocodb
+    network_mode: host  # jail shares host networking
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+      - NC_DB=
+```
+
+Save as `podman-compose.yml`, then run `bastille up`. Or via CLI:
+
+```bash
+bastille create -O \
+  --env PUID=1000 \
+  --env PGID=1000 \
+  --env TZ=UTC \
+  --env NC_DB= \
+  --data-path /path/to/containers/nocodb \
+  nocodb ghcr.io/daemonless/nocodb:latest inherit
+```
 
 ### Ansible
 
@@ -149,6 +190,8 @@ appjail oci run -Pd \
     volumes:
       - "/path/to/containers/nocodb:/config"
 ```
+
+Save as `nocodb-deploy.yaml`, then run `ansible-playbook nocodb-deploy.yaml`.
 
 Access at: `http://localhost:8080`
 
