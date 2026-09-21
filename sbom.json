@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-18T22:28:04Z",
+  "generated": "2026-09-21T22:37:33Z",
   "image": "nocodb",
   "tags": {
     "latest": {
       "app_version": "0.301.3",
       "arch": "amd64",
-      "generated": "2026-09-18T22:24:18Z",
+      "generated": "2026-09-21T22:28:47Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1731,42 +1731,42 @@
           {
             "name": "@ai-sdk/amazon-bedrock",
             "purl": "",
-            "version": "4.0.178"
+            "version": "4.0.179"
           },
           {
             "name": "@ai-sdk/anthropic",
             "purl": "",
-            "version": "3.0.118"
+            "version": "3.0.119"
           },
           {
             "name": "@ai-sdk/azure",
             "purl": "",
-            "version": "3.0.122"
+            "version": "3.0.123"
           },
           {
             "name": "@ai-sdk/deepseek",
             "purl": "",
-            "version": "2.0.64"
+            "version": "2.0.65"
           },
           {
             "name": "@ai-sdk/gateway",
             "purl": "",
-            "version": "3.0.196"
+            "version": "3.0.197"
           },
           {
             "name": "@ai-sdk/google",
             "purl": "",
-            "version": "3.0.123"
+            "version": "3.0.125"
           },
           {
             "name": "@ai-sdk/groq",
             "purl": "",
-            "version": "3.0.66"
+            "version": "3.0.67"
           },
           {
             "name": "@ai-sdk/openai",
             "purl": "",
-            "version": "3.0.114"
+            "version": "3.0.115"
           },
           {
             "name": "@ai-sdk/openai-compatible",
@@ -1836,12 +1836,12 @@
           {
             "name": "@aws-sdk/client-cognito-identity-provider",
             "purl": "",
-            "version": "3.1136.0"
+            "version": "3.1137.0"
           },
           {
             "name": "@aws-sdk/client-kinesis",
             "purl": "",
-            "version": "3.1136.0"
+            "version": "3.1137.0"
           },
           {
             "name": "@aws-sdk/client-s3",
@@ -1851,12 +1851,12 @@
           {
             "name": "@aws-sdk/client-ses",
             "purl": "",
-            "version": "3.1136.0"
+            "version": "3.1137.0"
           },
           {
             "name": "@aws-sdk/client-sns",
             "purl": "",
-            "version": "3.1136.0"
+            "version": "3.1137.0"
           },
           {
             "name": "@aws-sdk/client-sts",
@@ -1916,7 +1916,7 @@
           {
             "name": "@aws-sdk/lib-storage",
             "purl": "",
-            "version": "3.1136.0"
+            "version": "3.1137.0"
           },
           {
             "name": "@aws-sdk/middleware-bucket-endpoint",
@@ -1956,7 +1956,7 @@
           {
             "name": "@aws-sdk/s3-request-presigner",
             "purl": "",
-            "version": "3.1136.0"
+            "version": "3.1137.0"
           },
           {
             "name": "@aws-sdk/signature-v4-multi-region",
@@ -2201,7 +2201,7 @@
           {
             "name": "@exodus/bytes",
             "purl": "",
-            "version": "1.15.1"
+            "version": "1.15.2"
           },
           {
             "name": "@gar/promise-retry",
@@ -3516,7 +3516,7 @@
           {
             "name": "ai",
             "purl": "",
-            "version": "6.0.286"
+            "version": "6.0.287"
           },
           {
             "name": "airtable",
@@ -7136,12 +7136,12 @@
           {
             "name": "tldts",
             "purl": "",
-            "version": "7.4.13"
+            "version": "7.4.14"
           },
           {
             "name": "tldts-core",
             "purl": "",
-            "version": "7.4.13"
+            "version": "7.4.14"
           },
           {
             "name": "tmp",
@@ -7476,7 +7476,7 @@
           {
             "name": "xml-crypto",
             "purl": "",
-            "version": "6.3.0"
+            "version": "6.3.1"
           },
           {
             "name": "xml-encryption",
