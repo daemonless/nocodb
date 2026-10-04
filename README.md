@@ -41,7 +41,7 @@ services:
       - TZ=UTC  # Timezone for the container
       - NC_DB=  # External database connection string (e.g. pg://host:5432?u=user&p=pass&d=db). Defaults to a local SQLite file in /config.
     volumes:
-      - "/path/to/containers/nocodb:/config"
+      - "/containers/nocodb:/config"
     ports:
       - "8080:8080"
     # always (not unless-stopped) so FreeBSD's podman rc.d auto-starts it at boot
@@ -88,7 +88,7 @@ services:
       - nocodb: /config
 volumes:
   nocodb:
-    device: '/path/to/containers/nocodb'
+    device: '/containers/nocodb'
 ```
 
 **Makejail**:
@@ -104,47 +104,6 @@ OPTION from=ghcr.io/daemonless/nocodb:${tag}
 ```
 
 Save the files above, then run `appjail-director up`.
-
-
-> [!WARNING]
-> Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the jail's IPv4 address or hostname assigned by the virtual network.
->
-> To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
-
-### Podman CLI
-
-```bash
-podman run -d --name nocodb \
-  -p 8080:8080 \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -e TZ=UTC \
-  -e NC_DB= \
-  -v /path/to/containers/nocodb:/config \
-  ghcr.io/daemonless/nocodb:latest
-```
-
-Save as `run.sh`, then run `sh run.sh`.
-
-### AppJail
-
-
-```bash
-appjail oci run -Pd \
-  -o overwrite=force \
-  -o container="args:--pull" \
-  -o virtualnet=":<random> default" \
-  -o nat \
-  -o expose="8080:8080 proto:tcp" \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -e TZ=UTC \
-  -e NC_DB= \
-  -o fstab="/path/to/containers/nocodb /config <pseudofs>" \
-  ghcr.io/daemonless/nocodb:latest nocodb
-```
-
-Save the files above, then run `sh run.sh`.
 
 
 > [!WARNING]
@@ -170,42 +129,10 @@ services:
       - TZ=UTC
       - NC_DB=
     volumes:
-      - "/path/to/containers/nocodb:/config"
+      - "/containers/nocodb:/config"
 ```
 
-Save as `bastille-compose.yml`, then run `bastille up`. Or via CLI:
-
-```bash
-bastille create -O \
-  --env PUID=1000 \
-  --env PGID=1000 \
-  --env TZ=UTC \
-  --env NC_DB= \
-  --volume /path/to/containers/nocodb /config \
-  nocodb ghcr.io/daemonless/nocodb:latest inherit
-```
-
-### Ansible
-
-```yaml
-- name: Deploy nocodb
-  containers.podman.podman_container:
-    name: nocodb
-    image: "ghcr.io/daemonless/nocodb:latest"
-    state: started
-    restart_policy: always
-    env:
-      PUID: "1000"
-      PGID: "1000"
-      TZ: "UTC"
-      NC_DB: ""
-    ports:
-      - "8080:8080"
-    volumes:
-      - "/path/to/containers/nocodb:/config"
-```
-
-Save as `nocodb-deploy.yaml`, then run `ansible-playbook nocodb-deploy.yaml`.
+Save as `bastille-compose.yml`, then run `bastille up`.
 
 Access at: `http://localhost:8080`
 
