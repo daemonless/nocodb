@@ -41,8 +41,10 @@ RUN mkdir -p /build && cd /build && \
     NOCODB_VERSION=$(fetch -qo - https://registry.npmjs.org/nocodb/latest | jq -r '.version') && \
     echo "Resolved NOCODB_VERSION=$NOCODB_VERSION" && \
     printf '{"name":"nocodb-wrapper","private":true,"dependencies":{"nocodb":"%s","express":"^4.21.2","cors":"^2.8.5"}}' "$NOCODB_VERSION" > package.json && \
+    printf 'allow-remote=all\nallow-git=all\ndangerously-allow-all-scripts=true\n' > /build/.npmrc && \
+    printf 'allow-remote=all\nallow-git=all\ndangerously-allow-all-scripts=true\n' > /root/.npmrc && \
     CXX=/usr/bin/clang++ CC=/usr/bin/clang PYTHON=/usr/local/bin/python3 \
-    npm install --omit=dev --dangerously-allow-all-scripts && \
+    npm install --omit=dev --allow-remote=all --allow-git=all --dangerously-allow-all-scripts && \
     npm cache clean --force && \
     echo "$NOCODB_VERSION" > /build/version
 
