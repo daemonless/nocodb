@@ -39,7 +39,7 @@ services:
       - PUID=1000  # User ID for the application process
       - PGID=1000  # Group ID for the application process
       - TZ=UTC  # Timezone for the container
-      - NC_DB=  # External database connection string (e.g. pg://host:5432?u=user&p=pass&d=db). Defaults to a local SQLite file in /config.
+      # - NC_DB=  # External database connection string (e.g. pg://host:5432?u=user&p=pass&d=db). Defaults to a local SQLite file in /config.
     volumes:
       - "/containers/nocodb:/config"
     ports:
@@ -60,7 +60,6 @@ DIRECTOR_PROJECT=nocodb
 PUID=1000
 PGID=1000
 TZ=UTC
-NC_DB=
 ```
 
 **appjail-director.yml**:
@@ -83,7 +82,6 @@ services:
         - PUID: !ENV '${PUID}'
         - PGID: !ENV '${PGID}'
         - TZ: !ENV '${TZ}'
-        - NC_DB: !ENV '${NC_DB}'
     volumes:
       - nocodb: /config
 volumes:
@@ -127,7 +125,6 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=UTC
-      - NC_DB=
     volumes:
       - "/containers/nocodb:/config"
 ```

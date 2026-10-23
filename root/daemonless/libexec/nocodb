@@ -1,0 +1,8 @@
+#!/bin/sh
+# Start nocodb; /init has already dropped to the run user.
+
+export HOME=/config
+export NC_DISABLE_TELE=true
+
+cd /config
+exec /usr/local/bin/node /app/index.js
