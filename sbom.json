@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-23T08:33:28Z",
+  "generated": "2026-10-24T10:04:38Z",
   "image": "nocodb",
   "tags": {
     "latest": {
       "app_version": "0.301.3",
       "arch": "amd64",
-      "generated": "2026-10-23T08:18:56Z",
+      "generated": "2026-10-24T10:01:00Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -374,7 +374,7 @@
               "MIT"
             ],
             "name": "curl",
-            "version": "8.22.0"
+            "version": "8.23.0"
           },
           {
             "licenses": [
@@ -1336,7 +1336,7 @@
               "MIT"
             ],
             "name": "node22",
-            "version": "22.23.2_1"
+            "version": "22.23.2_2"
           },
           {
             "licenses": [
@@ -1357,7 +1357,7 @@
               "MPL20"
             ],
             "name": "nss",
-            "version": "3.131"
+            "version": "3.131.1"
           },
           {
             "licenses": [
@@ -1738,12 +1738,12 @@
           {
             "name": "@ai-sdk/gateway",
             "purl": "",
-            "version": "3.0.220"
+            "version": "3.0.221"
           },
           {
             "name": "@ai-sdk/google",
             "purl": "",
-            "version": "3.0.137"
+            "version": "3.0.138"
           },
           {
             "name": "@ai-sdk/groq",
@@ -2063,7 +2063,7 @@
           {
             "name": "@babel/helper-string-parser",
             "purl": "",
-            "version": "7.29.7"
+            "version": "7.29.11"
           },
           {
             "name": "@babel/helper-validator-identifier",
@@ -2073,7 +2073,7 @@
           {
             "name": "@babel/parser",
             "purl": "",
-            "version": "7.29.9"
+            "version": "7.29.11"
           },
           {
             "name": "@babel/runtime",
@@ -2083,7 +2083,7 @@
           {
             "name": "@babel/types",
             "purl": "",
-            "version": "7.29.8"
+            "version": "7.29.11"
           },
           {
             "name": "@borewit/text-codec",
@@ -2338,7 +2338,7 @@
           {
             "name": "@modelcontextprotocol/sdk",
             "purl": "",
-            "version": "1.32.1"
+            "version": "1.32.2"
           },
           {
             "name": "@monacopilot/core",
@@ -3503,7 +3503,7 @@
           {
             "name": "ai",
             "purl": "",
-            "version": "6.0.314"
+            "version": "6.0.315"
           },
           {
             "name": "airtable",
@@ -5843,7 +5843,7 @@
           {
             "name": "node-abi",
             "purl": "",
-            "version": "3.100.0"
+            "version": "3.101.0"
           },
           {
             "name": "node-abort-controller",
