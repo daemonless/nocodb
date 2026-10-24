@@ -8,4 +8,8 @@ cit:
   mode: screenshot
   port: 8080
   health: /api/v1/health
+  # nocodb listens and answers /api/v1/health before Nest has booted (data
+  # migrations run in between, ~35s on CI), so the screenshot came back
+  # blank. Wait for the real start line.
+  ready: "Nest application successfully started"
   wait: 300
